@@ -1,5 +1,6 @@
 let menuButton = document.querySelector("#hamburgurMenu");
-let navLink = document.querySelectorAll(".navlink");
+let navLink = document.querySelectorAll("li");
+console.log(navLink);
 // document.querySelector("#toggleMenu").style.display = "none";
 // document.querySelector("#toggleMenu").style.display = "block";
 // for hamburgur menu to work
@@ -27,7 +28,7 @@ for (let i = 0; i < 3; i++) {
   navLink[i].addEventListener("click", () => {
     var w = window.innerWidth;
     if (w < 1024) {
-      document.querySelector("#toggleMenu").style.display = "none";
+      isOpen = false;
     }
   });
 }

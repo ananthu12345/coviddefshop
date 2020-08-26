@@ -14,54 +14,7 @@
     <title>Corona Defence</title>
   </head>
   <body>
-    <!-- navbar -->
-    <!-- <nav class="flex items-center justify-between flex-wrap bg-blue-500 p-6 sticky top-0 lg:relative">
-      <div class="flex items-center flex-shrink-0 mr-6">
-        <span class="font-semibold text-2xl tracking-tight">Corona Defence Kit</span>
-        </svg>
-      </div>
-      <div class="block lg:hidden">
-        <button
-          id="hamburgurMenu"
-          class="flex items-center px-3 py-2 border rounded text-white border-gray-400 hover:text-gray hover:border-white"
-        >
-          <svg
-            class="fill-current h-3 w-3"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div id="toggleMenu" class="w-full transition duration-500 ease-in-out block hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow lg:flex lg:justify-end">
-          <a
-            href="#mask"
-            class="block mt-4 text-xl lg:inline-block lg:mt-0 hover:text-white text-current mr-4 navlink"
-          >
-            Buy Mask
-          </a>
-          <a
-            href="#sanitizer"
-            class="block mt-4 text-xl lg:inline-block lg:mt-0 hover:text-white text-current mr-4 navlink"
-          >
-            Buy Sanitizer
-          </a>
-          
-          <a
-            href="#contactus"
-            class="flex inline-block mt-4 text-xl lg:mt-0 hover:text-white text-current navlink"
-          >
-          <svg xmlns="http://www.w3.org/2000/svg" 
-          class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20"><path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/>
-          </svg>
-            Contact Us
-          </a>
-        </div>
-      </div>
-    </nav> -->
+    
     <nav
       class="sticky top-0 flex items-center justify-between flex-wrap p-6 fixed w-full z-10 top-0"
       x-data="{ isOpen: false }"
@@ -112,6 +65,7 @@
         :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }"
         @click.away="isOpen = false"
         x-show.transition="true"
+        id="toggleMenu"
       >
         <ul
           class="pt-4 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center"
@@ -120,6 +74,7 @@
             <a
               href="#mask"
               class="block mt-4 text-xl lg:inline-block lg:mt-0 hover:text-white text-current mr-4 navlink"
+              @click="isOpen = false"
             >
               Buy Mask
             </a>
@@ -128,6 +83,7 @@
             <a
               href="#sanitizer"
               class="block mt-4 text-xl lg:inline-block lg:mt-0 hover:text-white text-current mr-4 navlink"
+              @click="isOpen = false"
             >
               Buy Sanitizer
             </a>
@@ -142,6 +98,7 @@
             <a
             href="#contactus"
             class="flex inline-block text-xl lg:mt-0 hover:text-white text-current navlink"
+            @click="isOpen = false"
           >
           <svg xmlns="http://www.w3.org/2000/svg" 
           class="h-6 w-6 fill-current mr-2" viewBox="0 0 20 20"><path d="M20 18.35V19a1 1 0 0 1-1 1h-2A17 17 0 0 1 0 3V1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4c0 .56-.31 1.31-.7 1.7L3.16 8.84c1.52 3.6 4.4 6.48 8 8l2.12-2.12c.4-.4 1.15-.71 1.7-.71H19a1 1 0 0 1 .99 1v3.35z"/>
